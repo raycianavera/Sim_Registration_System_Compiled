@@ -35,7 +35,7 @@ body {
   margin-top: 2rem;
 }
 
-.canHov:hover{
+.canHov:hover {
   /* box-shadow: 0px 5px 0.4px #2f5a62; */
   /* border: solid 2px #2f5a62; */
   background-color: #c1ebe2 !important;
@@ -138,12 +138,21 @@ body {
   .d-flex {
     margin-top: 11px;
   }
+
+  .nav-link {
+    margin-right: 0rem;
+  }
+
+  .navbar-brand {
+    margin-right: 1rem;
+  }
 }
 
 @media only screen and (max-width: 430px) {
   .d-flex {
     margin-top: 11px;
   }
+
   .pl-5, .px-5 {
     padding-left: 2rem !important;
   }
@@ -166,6 +175,7 @@ body {
   .d-flex {
     margin-top: 11px;
   }
+
   .header h4 {
     font-size: 13px;
   }
@@ -191,6 +201,7 @@ body {
   .d-flex {
     margin-top: 11px;
   }
+
   .header h4 {
     font-size: 12px;
   }
@@ -215,7 +226,13 @@ body {
     left: 10px;
   }
 
+  .btn {
+    left: 0;
+    font-size: 10px;
+    width: 95px;
+  }
 
-
-
+  .nav-link {
+    font-size: 12px;
+}
 }

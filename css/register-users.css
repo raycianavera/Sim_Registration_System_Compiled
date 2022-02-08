@@ -1,14 +1,5 @@
 /* THIS CSS FILE IS LINKED TO LOCAL USER REGISTRATION AND FOREIGN REGISTRATION HTML */
 
-/* ERROR BORDER */
-.infodiv.success input {
-  border-color: #2ecc71;
-}
-
-.infodiv.error input {
-  border-color: #e74c3c;
-}
-
 body {
   font-family: 'PT Sans', sans-serif !important;
   background-color: #c1ebe2;
@@ -126,8 +117,20 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+  .pl-5, .px-5 {
+    padding-left: 0rem !important;
+  }
+
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+
   h2 {
     font-size: 23px;
+  }
+
+  .nav-link{
+    margin-right: 0rem;
   }
 }
 
@@ -141,6 +144,10 @@ h2 {
     margin-right: 0 !important;
   }
 
+  .btn {
+    font-size: 12px;
+  }
+
   h2 {
     font-size: 18px;
     margin-bottom: 0rem;
@@ -148,7 +155,7 @@ h2 {
 
   .nav-link{
     margin-right: 0rem;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .nsobutton {
@@ -182,6 +189,12 @@ h2 {
 }
 
 @media only screen and (max-width: 320px) {
+
+  .btn {
+    left: 0;
+    font-size: 10px;
+    width: 95px;
+  }
   .labelings{
     font-size: 13px;
   }
