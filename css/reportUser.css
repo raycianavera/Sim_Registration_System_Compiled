@@ -208,44 +208,6 @@ textarea {
   bottom: 10px;
 }
 
-/* ERROR MESSAGE */
-.infodiv i {
-  position: absolute;
-  top: 50px;
-  right: 15px;
-  visibility: hidden;
-}
-
-.infodiv small {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.infodiv.success input {
-  border-color: #2ecc71;
-}
-
-.infodiv.error input {
-  border-color: #e74c3c;
-}
-
-.infodiv.success i.fa-check-circle {
-  visibility: visible;
-  color: #2ecc71;
-}
-
-.infodiv.error i.fa-exclamation-circle {
-  visibility: visible;
-  color: #e74c3c;
-}
-
-.infodiv.error small {
-  visibility: visible;
-  color: #e74c3c;
-}
-
 /* MEDIA QUERY */
 @media only screen and (max-width: 1024px) {
   .container {
@@ -256,6 +218,10 @@ textarea {
 @media only screen and (max-width: 768px) {
   .pl-5, .px-5 {
     padding-left: 0rem !important;
+  }
+
+  h2{
+    font-size: 20px;
   }
 
   .navbar {
@@ -270,9 +236,6 @@ textarea {
     padding: 5rem 3rem 3rem 3rem;
   }
 
-  .profilepic{
-    width: 80px;
-  }
 }
 
 @media only screen and (max-width: 430px) {
@@ -280,20 +243,24 @@ textarea {
     padding-left: 2rem !important;
   }
 
+  .container {
+    padding: 3rem;
+  }
+
   .navbar-brand {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  .colphoto{
+  .btn {
+    font-size: 12px;
+  }
+
+  /* .colphoto{
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-  }
-
-  .profilepic{
-    width: 100px;
-  }
+  } */
 
   .repLabel{
     margin-bottom: 2rem !important;
@@ -315,10 +282,6 @@ textarea {
     padding-left: 2rem !important;
   }
 
-  .profilepic{
-    width: 85px;
-  }
-
   .nameLabel, .infolabels, .replybtn{
     font-size: 14px;
   }
@@ -332,7 +295,7 @@ textarea {
 @media only screen and (max-width: 320px) {
   .btn {
     left: 0;
-    font-size: 14px;
+    font-size: 10px;
     width: 95px;
   }
 
@@ -346,27 +309,16 @@ textarea {
     left: 10px;
   }
 
-  .container {
-    padding: 5rem 3rem 3rem 3rem;
-  }
-
-  .ss-btn {
-    font-size: 14px;
+  .ss-btn, .replybtn, .send-btn, .labelings, .nav-link {
+    font-size: 12px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .infodiv {
     margin-bottom: 1rem;
   }
 
-  .profilepic{
-    width: 75px;
-  }
-
-  .replybtn{
-    font-size: 13px;
-  }
 }
