@@ -63,17 +63,6 @@ body {
   padding: 5rem 7rem 3rem 7rem;
 }
 
-.profcol {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.profilepic {
-  width: 200px;
-  height: 200px;
-}
-
 /* FIRST COLUMN OF INFO */
 .labelings {
   font-weight: bold;
@@ -90,11 +79,6 @@ body {
 /* MEDIA QUERY */
 @media only screen and (max-width: 1024px) {
 
-  .profilepic {
-      width: 170px;
-      height: 170px;
-  }
-
   .container {
       padding: 5rem 3rem 3rem 3rem;
   }
@@ -103,11 +87,6 @@ body {
 @media only screen and (max-width: 768px) {
   .pl-5, .px-5 {
     padding-left: 0rem !important;
-  }
-
-  .profilepic {
-    width: 180px;
-    height: 180px;
   }
 
   .navbar {
@@ -128,31 +107,19 @@ body {
     padding-left: 2rem !important;
   }
 
-  .profilepic {
-    width: 170px;
-    height: 170px;
-  }
-
   .navbar-brand {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  .profcol {
-    justify-content: center;
-    padding-right: 4rem;
-    margin-bottom: 4rem;
+  .container{
+    padding: 3rem 0rem 3rem 3rem;
   }
 }
 
 @media only screen and (max-width: 380px) {
   .navbar-brand {
     font-size: 15px;
-  }
-
-  .profilepic {
-    width: 150px;
-    height: 150px;
   }
 
   .navbar {
@@ -162,22 +129,23 @@ body {
   .pl-5, .px-5 {
     padding-left: 2rem !important;
   }
-}
 
-@media only screen and (max-width: 320px) {
-  .profcol {
-    padding-right: 0;
+  .labelings, .information, .nav-link, {
+    font-size: 14px;
   }
 
   .btn {
-    left: 0;
-    font-size: 14px;
-    width: 95px;
+    font-size: 12px;
   }
 
-  .profilepic {
-    width: 130px;
-    height: 130px;
+}
+
+@media only screen and (max-width: 320px) {
+
+  .btn {
+    left: 0;
+    font-size: 10px;
+    width: 95px;
   }
 
   .navbar {
@@ -191,7 +159,11 @@ body {
   }
 
   .container {
-    padding: 5rem 3rem 3rem 3rem;
+    padding: 3rem;
+  }
+
+  .labelings, .information, .nav-link {
+    font-size: 12px;
   }
 
 }
