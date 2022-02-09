@@ -195,6 +195,10 @@ body {
   .btn {
     width: 110px;
   }
+
+  .table thead th, .table td {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -234,5 +238,9 @@ body {
 
   .nav-link {
     font-size: 12px;
+}
+
+.table thead th, .table td {
+  font-size: 12px;
 }
 }
