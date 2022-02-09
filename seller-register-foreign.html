@@ -50,28 +50,37 @@
       <div class="row header">
         <h2>Foreign User Sim Card Registration Form</h2>
       </div>
-      <form class="" action="#" method="post">
+      <form class="" action="includes/signupforeign.inc.php" method="post">
+        <?php
+        $fulUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
+        if(strpos($fulUrl, "signup=success") == true){
+          echo "<p class= 'success'> SUCCESS</p>";
+        }
+        elseif(strpos($fulUrl, "error=simnum-already-exist") == true){
+          echo "<p class= 'passnumexist'> ACCOUNT ALREADY EXIST</p>";
+        }
+        ?>
         <!-- FIRST ROW -->
         <div class="row">
           <div class="col-md-3">
             <label class="labelings">Last Name</label>
-            <input type="text" class="form-control" placeholder="Reeves" required>
+            <input type="text" name="lastname" class="form-control" placeholder="Reeves" required>
           </div>
 
           <div class="col-md-3">
             <label class="labelings">First Name</label>
-            <input type="text" class="form-control" placeholder="Keanu" required>
+            <input type="text" name="firstname" class="form-control" placeholder="Keanu" required>
           </div>
 
           <div class="col-md-3">
             <label class="labelings">Middle Name</label>
-            <input type="text" class="form-control" placeholder="Charles">
+            <input type="text" name="midname" class="form-control" placeholder="Charles">
           </div>
 
           <div class="col-md-3">
             <label class="labelings">Suffix</label>
-            <input type="text" class="form-control" placeholder="Sr">
+            <input type="text" name="suffix" class="form-control" placeholder="Sr">
           </div>
 
         </div>
@@ -80,7 +89,7 @@
         <div class="row srow">
           <div class="col-md-3">
             <label class="labelings">Date of Birth</label>
-            <input type="date" class="form-control" required>
+            <input type="date" name="dateofbirth" class="form-control" required>
           </div>
           <div class="col-md-3 ">
             <label class="labelings">Gender</label>
@@ -91,7 +100,7 @@
           </div>
           <div class="col-md-6 ">
             <label class="labelings">Passport Number</label>
-            <input type="text" class="form-control" required>
+            <input type="text" name="passnum" class="form-control" required>
           </div>
 
         </div>
@@ -101,11 +110,11 @@
         <div class="row srow">
           <div class="col-md-6">
             <label class="labelings">Nationality</label>
-            <input type="text" class="form-control" placeholder="American" required>
+            <input type="text" name="nationality" class="form-control" placeholder="American" required>
           </div>
           <div class="col-md-6">
             <label class="labelings">Sim Card Mobile # to be Registered</label>
-            <input type="tel" class="form-control" placeholder="ex: 09175901234" pattern="[0-9]{11}" title="Write an 11-digit number ex: 09175901234" required>
+            <input type="tel" name="simnum" class="form-control" placeholder="ex: 09175901234" pattern="[0-9]{11}" title="Write an 11-digit number ex: 09175901234" required>
           </div>
         </div>
 
@@ -120,7 +129,7 @@
         <div class="row">
           <div class="col-md-4">
             <label class="labelings">Date of Registration</label>
-            <input type="date" class="form-control" required>
+            <input type="date" name="dateofregis" class="form-control" required>
           </div>
           <div class="col-md-4">
             <label class="labelings">Time of Registration</label>
@@ -128,7 +137,7 @@
           </div>
           <div class="col-md-4">
             <label class="labelings">Registration Site</label>
-            <input type="text" class="form-control" placeholder="Cavite" required>
+            <input type="text" name="regisite" class="form-control" placeholder="Cavite" required>
           </div>
         </div>
 

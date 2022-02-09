@@ -50,28 +50,38 @@
       <div class="row header">
         <h2>Local User Sim Card Registration Form</h2>
       </div>
-      <form id="form" class="" action="#" method="post">
+      <form id="form" class="" action="includes/signuplocal.inc.php" method="post">
+        <?php
+        $fulUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+        if(strpos($fulUrl, "signup=success") == true){
+          echo "<p class= 'success'> SUCCESS</p>";
+        }
+        elseif(strpos($fulUrl, "error=simnum-already-exist") == true){
+          echo "<p class= 'nsoexist'> ACCOUNT ALREADY EXIST</p>";
+        }
+        ?>
 
         <!-- FIRST ROW -->
         <div class="row">
           <div class="col-md-3 infodiv">
             <label class="labelings">Last Name</label>
-            <input id="lastname" type="text" class="form-control" placeholder="Dela Cruz" required>
+            <input id="lastname" type="text" name="lastname" class="form-control" placeholder="Dela Cruz" required>
           </div>
 
           <div class="col-md-3 infodiv">
             <label class="labelings">First Name</label>
-            <input id="firstname" type="text" class="form-control" placeholder="Juan" required>
+            <input id="firstname" type="text" name="firstname" class="form-control" placeholder="Juan" required>
           </div>
 
           <div class="col-md-3 infodiv">
             <label class="labelings">Middle Name</label>
-            <input id="midname" type="text" class="form-control" placeholder="Reyes" required>
+            <input id="midname" type="text" name="midname" class="form-control" placeholder="Reyes" required>
           </div>
 
           <div class="col-md-3">
             <label class="labelings">Suffix</label>
-            <input type="text" class="form-control" placeholder="Jr">
+            <input type="text" name="suffix" class="form-control" placeholder="Jr">
           </div>
 
         </div>
@@ -80,7 +90,7 @@
         <div class="row srow">
           <div class="col-md-3 infodiv">
             <label class="labelings">Date of Birth</label>
-            <input id="dateofbirth" type="date" class="form-control" required>
+            <input id="dateofbirth" type="date" name="dateofbirth"  class="form-control" required>
           </div>
           <div class="col-md-3">
             <label class="labelings">Gender</label>
@@ -91,7 +101,7 @@
           </div>
           <div class="col-md-6 infodiv">
             <label class="labelings">NSO Barcode Number</label>
-            <input id="nsonum" type="text" class="form-control" required>
+            <input id="nsonum" type="text" name="nsonum" class="form-control" required>
           </div>
 
         </div>
@@ -100,7 +110,7 @@
         <div class="row srow">
           <div class="col-12 infodiv">
             <label class="Bday">Address</label>
-            <input id="address" type="text" class="form-control" placeholder="Blk 5 Lot 11 Ph 2, Jerusalem St, Town and Country, Salitran 4, Dasmarinas City, Cavite" required>
+            <input id="address" type="text" name="address" class="form-control" placeholder="Blk 5 Lot 11 Ph 2, Jerusalem St, Town and Country, Salitran 4, Dasmarinas City, Cavite" required>
           </div>
         </div>
 
@@ -115,7 +125,7 @@
         <div class="row">
           <div class="col-md-6">
             <label class="labelings">Type of Sim Card user</label>
-            <select class="form-control" name="usertype">
+            <select class="form-control" name="simcard">
               <option value="new prepaid user">New prepaid user</option>
               <option value="existing prepaid user">Existing prepaid user (Unregistered)</option>
               <option value="postpaid user">Postpaid user</option>
@@ -123,7 +133,7 @@
           </div>
           <div class="col-md-6 infodiv">
             <label class="labelings">Sim Card Mobile # to be Registered</label>
-            <input id="simnum" type="tel" class="form-control" placeholder="ex: 09175901234" pattern="[0-9]{11}" title="Write an 11-digit number ex: 09175901234" required>
+            <input id="simnum" type="tel" name="simnum" class="form-control" placeholder="ex: 09175901234" pattern="[0-9]{11}" title="Write an 11-digit number ex: 09175901234" required>
           </div>
         </div>
 
@@ -131,7 +141,7 @@
         <div class="row srow">
           <div class="col-md-4 infodiv">
             <label class="labelings">Date of Registration</label>
-            <input id="dateregis"type="date" class="form-control" required>
+            <input id="dateregis"type="date" name="dateofregis" class="form-control" required>
           </div>
           <div class="col-md-4 infodiv">
             <label class="labelings">Time of Registration</label>
@@ -139,7 +149,7 @@
           </div>
           <div class="col-md-4 infodiv">
             <label class="labelings">Registration Site</label>
-            <input id="regisite" type="text" class="form-control" placeholder="Cavite" required>
+            <input id="regisite" type="text" name="regisite" class="form-control" placeholder="Cavite" required>
           </div>
         </div>
 
