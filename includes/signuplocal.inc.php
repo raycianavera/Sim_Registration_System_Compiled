@@ -24,7 +24,7 @@ if(isset($_POST['button'])){
   if($resultsCheck == 1){
     header("Location: ../seller-register-local.html?error=simnum-already-exist");
   }
-  
+
   else {
     $sql = "INSERT INTO registerlocal (lastname, firstname, midname, suffix, dateofbirth, gender, nsonum, address, simcard, simnum,regisite,dateofregis)
     VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
@@ -37,7 +37,7 @@ if(isset($_POST['button'])){
     }
     else{
       // BIND PARAMETER TO THE PLACEHOLDER
-      mysqli_stmt_bind_param($stmt,"ssssssississ",  $lastname, $firstname, $midname, $suffix, $dateofbirth, $gender, $nsonum, $address, $simcard, $simnum, $regisite, $dateofregis);
+      mysqli_stmt_bind_param($stmt,"ssssssisssss",  $lastname, $firstname, $midname, $suffix, $dateofbirth, $gender, $nsonum, $address, $simcard, $simnum, $regisite, $dateofregis);
 
       // RUN PARAMETER INDSIDE DATABASE
       mysqli_stmt_execute($stmt);

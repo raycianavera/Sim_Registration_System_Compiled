@@ -35,7 +35,7 @@ if(isset($_POST['button'])){
       echo "SQL statement failed";
     }else{
       // BIND PARAMETER TO THE PLACEHOLDER
-      mysqli_stmt_bind_param($stmt,"ssssssisiss",  $lastname, $firstname, $midname, $suffix, $dateofbirth, $gender, $passnum, $nationality, $simnum, $regisite, $dateofregis);
+      mysqli_stmt_bind_param($stmt,"ssssssissss",  $lastname, $firstname, $midname, $suffix, $dateofbirth, $gender, $passnum, $nationality, $simnum, $regisite, $dateofregis);
 
       // RUN PARAMETER INDSIDE DATABASE
       mysqli_stmt_execute($stmt);
